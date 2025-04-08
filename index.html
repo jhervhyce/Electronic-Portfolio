@@ -1,11 +1,197 @@
+<!-- index.html -->
 <!DOCTYPE html>
-    <head>
-        <title>Portfolio</title>
-        <meta charset="utf-8">
-        <link href="./styles.css" type="text/css" rel="stylesheet">
-        <script type="text/javascript" src="./script.js"></script>
-    </head>
-    <body>
-    <h1>Jhervhyce</h1>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome | My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">Welcome</a>
+    <a href="wbl.html">Work-Based Learning</a>
+    <a href="extracurricular.html">Extracurricular</a>
+    <a href="extras.html">Extras</a>
+  </nav>
+
+  <header class="welcome-hero">
+    <img src="images/headshot.jpg" alt="Your Headshot" class="headshot">
+    <h1>Your Name</h1>
+    <p>Welcome to my portfolio!</p>
+  </header>
+
+  <section>
+    <h2>Bio</h2>
+    <p>Write a short bio about who you are, where you’re from, and your interests.</p>
+  </section>
+
+  <section>
+    <h2>Personal Statement</h2>
+    <p>This is where you share your mission, passion, and what drives you.</p>
+  </section>
+
+  <section>
+    <h2>Goals & Objectives</h2>
+    <ul>
+      <li>Goal 1</li>
+      <li>Goal 2</li>
+      <li>Objective 1</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contact Info</h2>
+    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    <p>Phone: (123) 456-7890</p>
+    <p>LinkedIn | GitHub</p>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Your Name</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!-- wbl.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WBL | My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">Welcome</a>
+    <a href="wbl.html">Work-Based Learning</a>
+    <a href="extracurricular.html">Extracurricular</a>
+    <a href="extras.html">Extras</a>
+  </nav>
+
+  <h1>Work-Based Learning</h1>
+
+  <section>
+    <h2>Project Evidence</h2>
+    <p>Describe or link to your WBL projects here.</p>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <ul>
+      <li>Google IT Support</li>
+      <li>Adobe Photoshop Certified</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Awards</h2>
+    <ul>
+      <li>Student of the Month</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Classroom Experience</h2>
+    <p>Talk about labs, presentations, teamwork, or hands-on experience.</p>
+  </section>
+
+  <section>
+    <h2>Resume</h2>
+    <button id="showResume">Toggle Resume</button>
+    <div id="resumeSection" class="hidden">
+      <a href="resume.pdf" target="_blank">Download my resume</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Your Name</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!-- extracurricular.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Extracurricular | My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">Welcome</a>
+    <a href="wbl.html">Work-Based Learning</a>
+    <a href="extracurricular.html">Extracurricular</a>
+    <a href="extras.html">Extras</a>
+  </nav>
+
+  <h1>Extracurricular</h1>
+
+  <section>
+    <h2>Hobbies</h2>
+    <ul>
+      <li>Photography</li>
+      <li>Gaming</li>
+      <li>Music Production</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Community Service</h2>
+    <p>Describe how you’ve given back or volunteered in your community.</p>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Your Name</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!-- extras.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Extras | My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">Welcome</a>
+    <a href="wbl.html">Work-Based Learning</a>
+    <a href="extracurricular.html">Extracurricular</a>
+    <a href="extras.html">Extras</a>
+  </nav>
+
+  <h1>Extras</h1>
+
+  <section>
+    <h2>Photos</h2>
+    <div class="photo-grid">
+      <img src="images/photo1.jpg" alt="Project Photo 1">
+      <img src="images/photo2.jpg" alt="Volunteering">
+    </div>
+  </section>
+
+  <section>
+    <h2>Evidence Links</h2>
+    <ul>
+      <li><a href="https://example.com/project-evidence">Project Documentation</a></li>
+      <li><a href="https://example.com/certification">Certification Link</a></li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Your Name</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
