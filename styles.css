@@ -1,55 +1,305 @@
+/* General styles */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #000000;
+  background-color: #0a1a2a; /* darker blue-black background */
   margin: 0;
   padding: 20px;
-  color: #ffffff;
+  color: #e0e7f1; /* lighter cool gray */
+  line-height: 1.6;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
-  gap: 15px;
-  padding: 10px 20px;
-  background: #ffffff;
+  gap: 20px;
+  padding: 15px 30px;
+  background: #005aab; /* blu corsa blue */
+  border-bottom: 2px solid #003d7a; /* darker blue border */
+  box-shadow: 0 2px 10px rgba(0, 90, 171, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar a {
-  color: black;
+  color: #d9e6f2;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-.welcome-hero, .section {
-  margin: 40px 0;
+.navbar a:hover {
+  background-color: #004a8f;
+  box-shadow: 0 0 10px #007bff;
 }
 
-h1, h2 {
-  color: #ffffff;
+/* Headings */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #c7dafc; /* soft bright blue */
+  text-align: center;
+  text-shadow: 0 0 8px #007bffaa;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 40px;
+  color: #a3bff9; /* lighter blue */
+  text-shadow: 0 0 4px #005aabaa;
+}
+
+/* Section layout */
+.section-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.section-content ul {
+  flex: 1;
+  min-width: 200px;
+}
+
+.section-content p {
+  flex: 1 1 50%;
+  min-width: 250px;
+  color: #dbe9ff;
+  text-shadow: 0 0 3px #003d7a33;
+}
+
+/* Image Grid */
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  flex: 2;
+}
+
+.project-grid img {
+  width: 180px;
+  height: 120px; /* fixed height for uniformity */
+  border-radius: 10px;
+  object-fit: cover; /* ensures image covers area without stretching */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.project-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Community image styling */
+.community-image {
+  width: 180px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 90, 171, 0.5);
+  flex-shrink: 0;
+  align-self: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 0;
+}
+
+.community-image:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.8);
+}
+
+/* Footer */
+.footer {
+  margin-top: 60px;
+  text-align: center;
+  color: #7a9edc;
+  font-size: 0.9em;
+  border-top: 1px solid #004a8f;
+  padding-top: 20px;
+}
+
+/* Welcome hero */
+.welcome-hero {
+  margin-top: 40px;
+  text-align: center;
 }
 
 .headshot {
   width: 150px;
+  height: 150px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 15px #007bffcc;
+  border: 3px solid #005aab;
+  transition: box-shadow 0.3s ease;
 }
 
-.photo-grid {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+.headshot:hover {
+  box-shadow: 0 0 25px #3399ffdd;
 }
 
-.photo-grid img {
-  width: 200px;
-  border-radius: 8px;
+/* Cars Gallery Sections */
+.cars-gallery section {
+  margin-bottom: 40px; /* spacing between car brand sections */
 }
 
-.footer {
-  margin-top: 40px;
+.cars-gallery h3 {
+  color: #00aaff; /* accent color */
+  margin-bottom: 15px;
   text-align: center;
-  color: #ffffff;
 }
 
-.hidden {
-  display: none;
+.car-images {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.car-images img {
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.car-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+/* Car Brands Container */
+.car-brands {
+  background: #1a1a2e;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  color: #e0e0ff;
+  text-align: center;
+}
+
+.car-brands h2 {
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  color: #5ddcff; /* bright electric blue */
+  text-shadow: 0 0 8px #5ddcffaa;
+}
+
+/* Car List inside car-brands */
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.car-item {
+  background: #16213e;
+  border-radius: 10px;
+  padding: 15px 20px;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.car-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px #5ddcffaa;
+}
+
+.car-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #44bfff;
+  text-shadow: 0 0 6px #44bfffbb;
+}
+
+.car-item p {
+  font-size: 1.1em;
+  line-height: 1.4;
+  color: #d0d9ff;
+}
+
+/* Evidence Links Section */
+.evidence-links {
+  background: #1a1a2e;
+  padding: 30px 25px;
+  margin: 40px auto;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  color: #e0e0ff;
+  text-align: center;
+}
+
+.evidence-links h2 {
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  color: #5ddcff; /* bright electric blue */
+  text-shadow: 0 0 8px #5ddcffaa;
+}
+
+.evidence-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.evidence-links ul li {
+  background: #16213e;
+  border-radius: 8px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+.evidence-links ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px #5ddcffaa;
+}
+
+.evidence-links ul li a {
+  color: #44bfff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1em;
+  display: block;
+}
+
+.evidence-links ul li a:hover {
+  text-decoration: underline;
+}
+.extra-images img {
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.extra-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
