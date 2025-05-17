@@ -51,6 +51,54 @@ h2 {
   text-shadow: 0 0 4px #005aabaa;
 }
 
+/* Welcome Hero Section */
+.welcome-hero {
+  display: flex; /* Use flexbox to align items in a row */
+  align-items: center; /* Vertically align items to the center */
+  justify-content: center; /* Horizontally center the group of items (images and h1) */
+  gap: 20px; /* Space between the images and the text */
+  padding: 20px; /* Padding around the hero content */
+  margin-top: 40px; /* Top margin for the hero section */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens if content is too wide */
+}
+
+.welcome-hero h1 {
+  color: #c7dafc; /* Original color from general h1 */
+  text-shadow: 0 0 8px #007bffaa; /* Original shadow from general h1 */
+  font-size: 2.5em; /* Original font-size from general h1 */
+  margin-bottom: 0; /* Remove default bottom margin as flex gap handles spacing */
+  text-align: left; /* Align text to the left if h1 is to the right of images, or center if preferred */
+  /* If h1 is meant to be centered above or below images when wrapped, consider media queries or different text-align */
+}
+
+.headshot {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Makes it a circle */
+  object-fit: cover;
+  box-shadow: 0 0 15px #007bffcc;
+  border: 3px solid #005aab;
+  transition: box-shadow 0.3s ease;
+}
+
+.headshot:hover {
+  box-shadow: 0 0 25px #3399ffdd;
+}
+
+.second-headshot {
+  width: 150px; /* Matched headshot size, adjust as needed */
+  height: 150px; /* Matched headshot size, adjust as needed */
+  object-fit: cover;
+  border-radius: 10px; /* Slightly rounded rectangle */
+  box-shadow: 0 0 15px #007bffcc; /* Consistent styling with headshot */
+  border: 3px solid #005aab; /* Consistent styling with headshot */
+  transition: box-shadow 0.3s ease; /* Consistent styling with headshot */
+}
+
+.second-headshot:hover {
+  box-shadow: 0 0 25px #3399ffdd; /* Consistent styling with headshot */
+}
+
 /* Section layout */
 .section-content {
   display: flex;
@@ -63,6 +111,7 @@ h2 {
 .section-content ul {
   flex: 1;
   min-width: 200px;
+  /* Consider adding list-style: none; and padding: 0; if default bullet points are not desired */
 }
 
 .section-content p {
@@ -78,14 +127,14 @@ h2 {
   flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
-  flex: 2;
+  flex: 2; /* This implies it's a flex item within another flex container */
 }
 
 .project-grid img {
   width: 180px;
   height: 120px; /* fixed height for uniformity */
   border-radius: 10px;
-  object-fit: cover; /* ensures image covers area without stretching */
+  object-fit: cover;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
@@ -103,9 +152,9 @@ h2 {
   object-fit: cover;
   box-shadow: 0 4px 15px rgba(0, 90, 171, 0.5);
   flex-shrink: 0;
-  align-self: flex-start;
+  align-self: flex-start; /* Works if the parent is a flex container */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-top: 0;
+  margin-top: 0; /* Explicitly set, good if overriding other margins */
 }
 
 .community-image:hover {
@@ -113,47 +162,17 @@ h2 {
   box-shadow: 0 8px 25px rgba(0, 123, 255, 0.8);
 }
 
-/* Footer */
-.footer {
-  margin-top: 60px;
-  text-align: center;
-  color: #7a9edc;
-  font-size: 0.9em;
-  border-top: 1px solid #004a8f;
-  padding-top: 20px;
-}
-
-/* Welcome hero */
-.welcome-hero {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.headshot {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto 20px;
-  box-shadow: 0 0 15px #007bffcc;
-  border: 3px solid #005aab;
-  transition: box-shadow 0.3s ease;
-}
-
-.headshot:hover {
-  box-shadow: 0 0 25px #3399ffdd;
-}
-
 /* Cars Gallery Sections */
 .cars-gallery section {
   margin-bottom: 40px; /* spacing between car brand sections */
 }
 
-.cars-gallery h3 {
+.cars-gallery h3 { /* This h3 is specific to .cars-gallery */
   color: #00aaff; /* accent color */
   margin-bottom: 15px;
   text-align: center;
+  font-size: 1.6em; /* Example: slightly smaller than h2 */
+  /* Consider text-shadow if consistent with other headings */
 }
 
 .car-images {
@@ -169,7 +188,7 @@ h2 {
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
   cursor: pointer;
 }
 
@@ -190,11 +209,12 @@ h2 {
   text-align: center;
 }
 
-.car-brands h2 {
+.car-brands h2 { /* This h2 is specific to .car-brands */
   font-size: 2.2em;
   margin-bottom: 25px;
   color: #5ddcff; /* bright electric blue */
   text-shadow: 0 0 8px #5ddcffaa;
+  /* text-align: center; Inherited from .car-brands */
 }
 
 /* Car List inside car-brands */
@@ -212,7 +232,7 @@ h2 {
   width: 250px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
+  text-align: center; /* Ensures content within car-item is centered */
 }
 
 .car-item:hover {
@@ -220,17 +240,19 @@ h2 {
   box-shadow: 0 8px 20px #5ddcffaa;
 }
 
-.car-item h3 {
+.car-item h3 { /* This h3 is specific to .car-item */
   font-size: 1.5em;
   margin-bottom: 10px;
   color: #44bfff;
   text-shadow: 0 0 6px #44bfffbb;
+  /* text-align: center; Inherited from .car-item */
 }
 
 .car-item p {
   font-size: 1.1em;
   line-height: 1.4;
   color: #d0d9ff;
+  /* text-align: center; Inherited from .car-item. If specific alignment is needed, set it here. */
 }
 
 /* Evidence Links Section */
@@ -245,18 +267,19 @@ h2 {
   text-align: center;
 }
 
-.evidence-links h2 {
+.evidence-links h2 { /* This h2 is specific to .evidence-links */
   font-size: 2.2em;
   margin-bottom: 25px;
   color: #5ddcff; /* bright electric blue */
   text-shadow: 0 0 8px #5ddcffaa;
+  /* text-align: center; Inherited from .evidence-links */
 }
 
 .evidence-links ul {
   list-style: none;
   padding: 0;
-  margin: 0 auto;
-  max-width: 500px;
+  margin: 0 auto; /* This helps in centering the ul if its width is less than max-width of parent */
+  max-width: 500px; /* Or adjust as needed */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -269,8 +292,8 @@ h2 {
   padding: 10px 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex: 1 1 200px;
-  text-align: center;
+  flex: 1 1 200px; /* Allows items to grow and shrink, with a base width */
+  text-align: center; /* Ensures link text is centered if it doesn't fill the li */
 }
 
 .evidence-links ul li:hover {
@@ -283,23 +306,64 @@ h2 {
   font-weight: 600;
   text-decoration: none;
   font-size: 1.1em;
-  display: block;
+  display: block; /* Makes the entire li area clickable */
 }
 
 .evidence-links ul li a:hover {
   text-decoration: underline;
 }
+
+/* Extra Images Section */
+.extra-images {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem; /* Can be adjusted or made consistent with other top margins like 20px or 40px */
+}
+
 .extra-images img {
-  width: 200px;
-  height: 120px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   cursor: pointer;
 }
 
 .extra-images img:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+/* Footer */
+.footer {
+  margin-top: 60px;
+  text-align: center;
+  color: #7a9edc;
+  font-size: 0.9em;
+  border-top: 1px solid #004a8f;
+  padding-top: 20px;
+}
+
+/* Styling for the iframe container in wbl.html */
+.iframe-container {
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  justify-content: space-around; /* Distribute space around items, good for fixed widths */
+  align-items: flex-start; /* Align items to the start of the cross axis */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if not enough space */
+  gap: 20px; /* Space between iframes */
+}
+
+.iframe-container iframe {
+  border: 1px solid #ccc; /* Optional border for iframes */
+  /* The width and height are set in HTML.
+     If you want them to be responsive within the flex container,
+     you might want to adjust their widths here. For example:
+     width: 30%; /* Adjust percentage as needed, considering gap */
+  /* Or use max-width to prevent them from becoming too large */
+  /* max-width: 640px; /* Respect the original width as a maximum */
+  /* width: 100%; /* Make them take up available space in their flex item container if you adjust flex properties */
 }
