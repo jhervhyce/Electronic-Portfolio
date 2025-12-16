@@ -147,7 +147,8 @@ h2 {
 
 /* New styles for the Stocks and HACC Project Evidence images */
 .stocks-images,
-.hacc-images {
+.hacc-images
+.presentation-group img {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -158,13 +159,25 @@ h2 {
 }
 
 .stocks-images img,
-.hacc-images img {
+.hacc-images img
+.presentation-group img {
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   filter: none !important; /* FIX: Prevents color inversion from browser/system dark modes */
   max-width: 100%; /* Ensure responsiveness */
   height: auto;
+}
+.stocks-images,
+.hacc-images,
+.presentation-group { /* Styles for the container of the new groups */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 /* Image Grid */
@@ -322,4 +335,10 @@ h2 {
   /* Or use max-width to prevent them from becoming too large */
   /* max-width: 640px; /* Respect the original width as a maximum */
   /* width: 100%; /* Make them take up available space in their flex item container if you adjust flex properties */
+}
+h3 {
+  color: #a3bff9; /* Lighter blue */
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
